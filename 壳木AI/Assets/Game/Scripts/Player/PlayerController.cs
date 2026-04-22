@@ -17,6 +17,9 @@ namespace Game.Player
         CharacterController _cc;
         Vector3 _velocity;
 
+        // 置 true 后外部脚本全权控制旋转，PlayerController 不再按移动方向转身
+        [HideInInspector] public bool ExternalRotation;
+
         const float Gravity = -9.81f;
 
         void Awake()
@@ -56,7 +59,7 @@ namespace Game.Player
 
             _cc.Move(move * (_moveSpeed * Time.deltaTime));
 
-            if (move.sqrMagnitude > 0.01f)
+            if (move.sqrMagnitude > 0.01f && !ExternalRotation)
                 transform.forward = Vector3.Slerp(transform.forward, move, 10f * Time.deltaTime);
         }
 
