@@ -1,0 +1,73 @@
+Shader "Wonderm/Standard_Flag" {
+	Properties {
+		_MainTex ("AlbedoTex", 2D) = "white" {}
+		_AlbedoColor ("AlbedoColor", Vector) = (0.8823529,0.8823529,0.8823529,1)
+		_BumpMap ("BumpTex", 2D) = "bump" {}
+		_BumpScales ("BumpScales", Range(0, 1)) = 0
+		_MetalicTex ("MetalicTex", 2D) = "white" {}
+		_Metallic ("Metallic", Range(0, 1)) = 0.798
+		_Smoothness ("Smoothness", Range(0, 1)) = 0.875
+		[MaterialToggle] _UseDither ("UseDither", Float) = 1
+		_StartDither ("StartDither", Range(0, 100)) = 0
+		_EndDither ("EndDither", Range(0, 1)) = 0
+		_Alpha ("Alpha", Range(0, 1)) = 1
+		[Header(Wave)] [KeywordEnum(Forward ,Inverse)] _Pivot ("Pivot ", Float) = 0
+		[KeywordEnum(Horizontal ,Vertical)] _Dir ("Dir", Float) = 0
+		_Frequency ("Frequency", Float) = 1
+		_AmplitudeStrength ("Amplitude Strength", Float) = 1
+		_InvWaveLength ("Inverse Wave Length", Float) = 1
+		_Fold ("Fold", Range(0, 2)) = 0.5
+	}
+	//DummyShaderTextExporter
+	SubShader{
+		Tags { "RenderType"="Opaque" }
+		LOD 200
+
+		Pass
+		{
+			HLSLPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+
+			float4x4 unity_ObjectToWorld;
+			float4x4 unity_MatrixVP;
+			float4 _MainTex_ST;
+
+			struct Vertex_Stage_Input
+			{
+				float4 pos : POSITION;
+				float2 uv : TEXCOORD0;
+			};
+
+			struct Vertex_Stage_Output
+			{
+				float2 uv : TEXCOORD0;
+				float4 pos : SV_POSITION;
+			};
+
+			Vertex_Stage_Output vert(Vertex_Stage_Input input)
+			{
+				Vertex_Stage_Output output;
+				output.uv = (input.uv.xy * _MainTex_ST.xy) + _MainTex_ST.zw;
+				output.pos = mul(unity_MatrixVP, mul(unity_ObjectToWorld, input.pos));
+				return output;
+			}
+
+			Texture2D<float4> _MainTex;
+			SamplerState sampler_MainTex;
+
+			struct Fragment_Stage_Input
+			{
+				float2 uv : TEXCOORD0;
+			};
+
+			float4 frag(Fragment_Stage_Input input) : SV_TARGET
+			{
+				return _MainTex.Sample(sampler_MainTex, input.uv.xy);
+			}
+
+			ENDHLSL
+		}
+	}
+	Fallback "Diffuse"
+}

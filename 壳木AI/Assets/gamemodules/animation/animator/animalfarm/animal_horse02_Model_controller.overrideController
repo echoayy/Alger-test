@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: animal_horse02_Model_controller
+  m_Controller: {fileID: 9100000, guid: 579c52ca40719f143a1c7fa0135f9953, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d355b8571a8906e419074ba9c4eef3d3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 42e7261153691924cb1f40820105fe80, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 54f8ecd351433e44f9cc962fc58a2f31, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4379c0d3afbfa004ca89f7632e9154e2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0943289d219dec542af8cc530fccfe9c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 097a8b19ce4b8b947a63670423443d21, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5a03dcd848198d54fb03acd5eade154b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: abf2632cb10e44d45a441700d23a2fbb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: a64457b70dd36da4aad3f3e59b87486e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c3fb0c88caeb33242a31f17f83f689bf, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 810f8e830c3893240a8da86654482020, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: cf3e070886b02ef45bf77591470cb1fd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9408344f282ba9447a30fde783d67d4c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c3fb0c88caeb33242a31f17f83f689bf, type: 2}
