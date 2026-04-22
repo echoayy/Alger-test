@@ -1,5 +1,6 @@
 using UnityEngine;
 using Starter.UI;
+using Starter.Runtime;
 
 namespace Starter.Bootstrap
 {
@@ -18,6 +19,7 @@ namespace Starter.Bootstrap
         void InitializeSystems()
         {
             UIManager.Inst.Init();
+            SaveManager.BeginSession();
             Debug.Log("[Bootstrap] Systems initialized.");
         }
     }
