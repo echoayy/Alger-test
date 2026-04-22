@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Open_14
+  serializedVersion: 6
+  m_Legacy: 1
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 0, y: -0, z: -0, w: 1}
+        inSlope: {x: 0, y: -0.1711584, z: 0, w: -0.000488162}
+        outSlope: {x: 0, y: -0.1711584, z: 0, w: -0.000488162}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.16666667
+        value: {x: 0, y: -0.12488344, z: -0, w: 0.99217147}
+        inSlope: {x: 0, y: -1.3550308, z: 0, w: -0.17505702}
+        outSlope: {x: 0, y: -1.3550308, z: 0, w: -0.17505702}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.36666667
+        value: {x: 0, y: -0.46157965, z: -0, w: 0.8870988}
+        inSlope: {x: 0, y: -1.7559611, z: 0, w: -0.91399276}
+        outSlope: {x: 0, y: -1.7559611, z: 0, w: -0.91399276}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.53333336
+        value: {x: -6.347705e-19, y: -0.7122711, z: 6.347705e-19, w: 0.7019045}
+        inSlope: {x: -7.7016563e-17, y: -1.1490109, z: 7.7016563e-17, w: -1.1602565}
+        outSlope: {x: -7.7016563e-17, y: -1.1490109, z: 7.7016563e-17, w: -1.1602565}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.6
+        value: {x: -1.0128483e-17, y: -0.7849587, z: 1.0128483e-17, w: 0.619548}
+        inSlope: {x: -1.4688482e-16, y: -1.0593028, z: 1.4688482e-16, w: -1.3395078}
+        outSlope: {x: -1.4688482e-16, y: -1.0593028, z: 1.4688482e-16, w: -1.3395078}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.6666667
+        value: {x: -1.7064633e-17, y: -0.83258456, z: 1.7064633e-17, w: 0.553898}
+        inSlope: {x: -1.7977447e-17, y: -0.12004344, z: 1.7977447e-17, w: -0.17355096}
+        outSlope: {x: -1.7977447e-17, y: -0.12004344, z: 1.7977447e-17, w: -0.17355096}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.8000001
+        value: {x: -8.917684e-18, y: -0.7761658, z: 8.917684e-18, w: 0.630529}
+        inSlope: {x: 4.8281457e-17, y: 0.3503813, z: -4.8281457e-17, w: 0.43811455}
+        outSlope: {x: 4.8281457e-17, y: 0.3503813, z: -4.8281457e-17, w: 0.43811455}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.8333334
+        value: {x: -7.965129e-18, y: -0.7691494, z: 7.965129e-18, w: 0.63906896}
+        inSlope: {x: 1.4288334e-17, y: 0.10524551, z: -1.4288334e-17, w: 0.12809974}
+        outSlope: {x: 1.4288334e-17, y: 0.10524551, z: -1.4288334e-17, w: 0.12809974}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Dummy_door_005_1
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: -0.6791683, y: 1.1759844, z: 0.030573348}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.8333334
+        value: {x: -0.6791683, y: 1.1759844, z: 0.030573348}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Dummy_door_005_1
+  m_ScaleCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: 0
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0.8333334
+        value: {x: 1, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: Dummy_door_005_1
+  m_FloatCurves: []
+  m_PPtrCurves: []
+  m_SampleRate: 30
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: -0.27302694, y: 1.279104, z: 0.6443947}
+    m_Extent: {x: 1.0637171, y: 1.3009648, z: 0.8542146}
+  m_ClipBindingConstant:
+    genericBindings: []
+    pptrCurveMapping: []
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events: []
