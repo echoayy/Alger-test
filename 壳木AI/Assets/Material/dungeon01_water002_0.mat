@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: dungeon01_water002_0
+  m_Shader: {fileID: 4800000, guid: cab1df4c0e7da0841ba04dac759e3f3d, type: 3}
+  m_ShaderKeywords: _EMISSION _FLOWTYPE_AUTO
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _main:
+        m_Texture: {fileID: 2800000, guid: d9f9d0725e4c7a64ca7138824c59c6ef, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _niuqu:
+        m_Texture: {fileID: 2800000, guid: bb6a813b48e056a499a14e22a887db6f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_6088:
+        m_Texture: {fileID: 2800000, guid: b59e6513fcf7f0c4facbb30907efd9de, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _wave1:
+        m_Texture: {fileID: 2800000, guid: 6b3e4d314bc1ea747b064c40125152b1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _wave2:
+        m_Texture: {fileID: 2800000, guid: 2d9a1f7f238aa704eb48e1c5d2b975cf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BaseFlowSpeed: 1
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DissUVOffsetFactor1: 0.1
+    - _DissUVOffsetFactor2: 0.1
+    - _DissVertexOffsetSpeed: 0.826
+    - _DstBlend: 0
+    - _FlowSpeed1: 1
+    - _FlowSpeed2: 2.94
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _IntersectGrow: 0.2
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Reflect: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _Speed: 0.7421823
+    - _SpeedX: 0
+    - _SpeedY: 0
+    - _SrcBlend: 1
+    - _Tess: 1
+    - _UVSec: 0
+    - _Wave: 0
+    - _ZWrite: 1
+    - _blue_speed: 0.5553657
+    - _green_speed: 0.2813658
+    - _niuqu_speed: 0
+    - _red_speed: 0.5553657
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FlowDirection: {r: 0, g: 3, b: 0, a: 0}
+    - _FlowTex1Color: {r: 0.04411763, g: 0.04411763, b: 0.04411763, a: 1}
+    - _FlowTex2Color: {r: 0.13235295, g: 0.113882616, b: 0.09050606, a: 1}
+    - _Foam: {r: 1, g: 1, b: 1, a: 1}
+    - _HeightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _IntersectColor: {r: 0.2352941, g: 0.22517599, b: 0.1435986, a: 1}
+    - _MailColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainColor: {r: 1, g: 0.99264705, b: 0.99264705, a: 1}
+    - _VertexMul: {r: 0, g: 0.1, b: 0, a: 0}
+    - _VertexOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Water: {r: 0, g: 0.6, b: 1, a: 1}
+    - _node_7599: {r: 0.5, g: 0.5, b: 0.5, a: 1}

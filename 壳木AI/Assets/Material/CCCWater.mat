@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CCCWater
+  m_Shader: {fileID: 4800000, guid: afa90e81d4a7b56408ab483c6386b296, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 77edab1f8e52ed04c8d94c94f58adaf2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaOffset: 0.069
+    - _DepthScale: 0.96
+    - _FoamOffset: 6.4
+    - _FoamSpeed: 0.79
+    - _FoamStrength: 0.48
+    - _RefractionAmt: 0.2
+    - _Shininess: 42
+    - _Tile: 0.0312
+    - _UseFixOffset: 0.32
+    m_Colors:
+    - _DepthColor: {r: 0.0894382, g: 0.8501239, b: 0.9170056, a: 1}
+    - _FoamColor: {r: 0.9718282, g: 0.97644246, b: 0.94342726, a: 1}
+    - _FresnelColor: {r: 0.24475172, g: 0.5214867, b: 0.6771959, a: 1}
+    - _MoonLightDir: {r: -0.9808315, g: 0.1820319, b: -0.069526255, a: 0}
+    - _MoonSpecular: {r: 0.2882961, g: 0.6922036, b: 0.9173475, a: 1}
+    - _ReflectionColor: {r: 0.13744701, g: 0.37879184, b: 0.5711637, a: 1}
+    - _SunLightDir: {r: 0.8777173, g: -0.47223532, b: 0.081277855, a: 0}
+    - _SunSpecular: {r: 1, g: 0.9975572, b: 0.978286, a: 1}
+  m_BuildTextureStacks: []

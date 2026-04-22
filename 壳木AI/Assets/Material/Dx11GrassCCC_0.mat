@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Dx11GrassCCC_0
+  m_Shader: {fileID: 4800000, guid: c09a6c8e3d70f1248993bc72fe85ac14, type: 3}
+  m_ShaderKeywords: EIGHT_GRASS_TYPES GRASS_TOP_VIEW_COMPENSATION GRASS_USE_POINT_TOPOLOGY
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _ColorMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DensityTex_0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DensityTex_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Displacement:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT00_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT01_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT02_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT03_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT04_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT05_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT06_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GT07_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassAllTexAtlas:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex00:
+        m_Texture: {fileID: 2800000, guid: 033b9397950bbd043a4145c554ab11f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex01:
+        m_Texture: {fileID: 2800000, guid: 1d38865e70bab924b842a42bcde95682, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex02:
+        m_Texture: {fileID: 2800000, guid: c925a2dd9db0fd24eb70d3cd886cc99e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex03:
+        m_Texture: {fileID: 2800000, guid: acd6c585a56d84b42b83ccac94681f5f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex04:
+        m_Texture: {fileID: 2800000, guid: 2043eb093c237ad4ca2684ab9b3efb54, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex05:
+        m_Texture: {fileID: 2800000, guid: 20f619d6952089942ab0535561115141, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex06:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrassTex07:
+        m_Texture: {fileID: 2800000, guid: 5775cdf0de0a7fa488431cd8b634c799, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Disorder: 0.8
+    - _DrawTerrain00: 1
+    - _DrawTerrain01: 1
+    - _DrawTerrain02: 1
+    - _DrawTerrain03: 0
+    - _DrawTerrain04: 0
+    - _DrawTerrain05: 0
+    - _DrawTerrain06: 0
+    - _DrawTerrain07: 1
+    - _DrawTerrainColor: 1
+    - _EdgeLength: 6.4
+    - _FadeOrder: 0.798
+    - _GrassShadowClampTo1: 0.814
+    - _GrassShadowCosClampTo1: 0.699
+    - _GrassShadowDistance: 69.8
+    - _HeightCutoff: 0.261
+    - _LODEnd: 60.2
+    - _LODMax: 5
+    - _LODStart: 20.7
+    - _MaxHeight00: 0.8
+    - _MaxHeight01: 1.5
+    - _MaxHeight02: 2
+    - _MaxHeight03: 1.5
+    - _MaxHeight04: 1
+    - _MaxHeight05: 0.6
+    - _MaxHeight06: 1.5
+    - _MaxHeight07: 2.02
+    - _MaxTessellation: 1
+    - _MinHeight00: 0.39
+    - _MinHeight01: 0.8
+    - _MinHeight02: 0.2
+    - _MinHeight03: 0.8
+    - _MinHeight04: 0.23
+    - _MinHeight05: 0.2
+    - _MinHeight06: 0.2
+    - _MinHeight07: 2.76
+    - _Resolution: 1
+    - _Softness00: 0.498
+    - _Softness01: 0.5
+    - _Softness02: 0.5
+    - _Softness03: 0.5
+    - _Softness04: 0.156
+    - _Softness05: 0.156
+    - _Softness06: 0.5
+    - _Softness07: 0.499
+    - _TextureCutoff: 0.876
+    - _Width00: 0.61
+    - _Width01: 0.5
+    - _Width02: 0.2
+    - _Width03: 0.4
+    - _Width04: 0.53
+    - _Width05: 0.5
+    - _Width06: 0.5
+    - _Width07: 0.55
+    m_Colors:
+    - _GrassBottomColor: {r: 0.8308824, g: 0.8308824, b: 0.8308824, a: 1}
+    - _GrassFading: {r: 90, g: 100, b: 1, a: 1}
+    - _GrassHeighening: {r: 5, g: 10, b: 0.3, a: 1}
+    - _GrassWidening: {r: 60.4, g: 80.4, b: 2.2, a: 1}
+    - _WindDirRotation: {r: 0, g: 0, b: 0.3, a: 0.15}
+    - _WindParams: {r: 0.3, g: -1.3, b: 0.15, a: 1.3}

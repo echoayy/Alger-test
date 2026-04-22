@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: objects_desk_045_2
+  m_Shader: {fileID: 4800000, guid: 64a4c3c5b85829d439bf16d72302cb67, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Custom:
+        m_Texture: {fileID: 2800000, guid: 0a6106c46a395614bbf724d884669ca6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 0caf103ca8d7398458626a5e716ba174, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: -1}
+    m_Floats:
+    - _BrightLimit: 0.5
+    - _Cutoff: 0.5
+    - _DarkLimit: 0
+    - _Glossiness: 0.2
+    - _Lerp: 1
+    - _Lerp2: 1
+    - _Lerp3: 1
+    - _Metallic: 0
+    m_Colors:
+    - _Color: {r: 0.86764705, g: 0.86764705, b: 0.86764705, a: 1}
+    - _CustomColor: {r: 1, g: 0.7852943, b: 0.46323532, a: 1}
+    - _CustomColor2: {r: 1, g: 1, b: 1, a: 1}
+    - _CustomColor3: {r: 1, g: 1, b: 1, a: 1}

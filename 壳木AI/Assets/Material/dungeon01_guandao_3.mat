@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: dungeon01_guandao_3
+  m_Shader: {fileID: 4800000, guid: 56db4dae5e5a3e84ea2f9875cb1439f0, type: 3}
+  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _NORMALMAP _SPECULARHIGHLIGHTS_OFF
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _EmissionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MRA_Tex:
+        m_Texture: {fileID: 2800000, guid: 18240a1114042aa488b54b6efda8ac66, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: e0815a478c700ea40b561af2b5babab3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 61638291acf34a149acb6064d80fdbf5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AmbientStrength: 1.6
+    - _Cutoff: 0.5
+    - _EmissionStrength: 1
+    - _HeightStrength: 0
+    - _Metallic: -0
+    - _Multiplier: 1
+    - _NormalStrength: 1
+    - _Smoothness: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}

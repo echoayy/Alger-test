@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: mtree020_1_0
+  m_Shader: {fileID: 4800000, guid: f1aec58e998c37a4784a4603446d5b0b, type: 3}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _COLORMODE_DIFFUSE _EMISSION _SHAKEMODE_R
+    _USEAO_AO
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 53d2b0ecdf1b64e41be967b63165c328, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AlphaClip: 0.293
+    - _ColorMode: 0
+    - _Glossiness: 0.2
+    - _LerpNormal: 0.921
+    - _Metallic: 0
+    - _UseAO: 1
+    m_Colors:
+    - _AO_extend: {r: 1.26, g: 0.27, b: -0.84, a: -1.74}
+    - _AO_pos: {r: -2.57, g: 0.69, b: 1.83, a: 1.02}
+    - _MainColor: {r: 0.8161765, g: 0.8161765, b: 0.8161765, a: 1}
+    - _WindDirection: {r: 6, g: 6, b: 6, a: 6}
