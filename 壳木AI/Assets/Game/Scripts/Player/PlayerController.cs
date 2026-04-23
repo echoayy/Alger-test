@@ -33,6 +33,8 @@ namespace Game.Player
             Animator.StringToHash("Attack2"),
         };
 
+        public bool ExternalRotation { get; set; }
+
         CharacterController _cc;
         float _yVelocity;
         float _coyoteTimer;
