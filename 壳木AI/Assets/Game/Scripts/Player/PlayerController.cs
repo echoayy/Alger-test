@@ -22,7 +22,7 @@ namespace Game.Player
         [Header("Animation")]
         [SerializeField] Animator _animator;
         // Maps Unity speed (units/s) to Anim_Tall_Man blend tree range [2.4 walk → 6.5 run → 8.5 fastrun]
-        [SerializeField] float _animSpeedScale = 0.375f;
+        [SerializeField] float _animSpeedScale = 1f;
 
         static readonly int _hashSpeed    = Animator.StringToHash("Speed");
         static readonly int _hashOnGround = Animator.StringToHash("OnGround");
