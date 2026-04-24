@@ -23,7 +23,7 @@ namespace Game.Portia
             {
                 _current.Interact(gameObject);
                 if (_current is GatherNode)
-                    GetComponent<PlayerController>()?.PlayAttack();
+                    GetComponent<PlayerController>()?.PlayGather();
             }
         }
 

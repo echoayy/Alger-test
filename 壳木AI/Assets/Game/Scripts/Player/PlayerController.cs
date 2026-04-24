@@ -30,6 +30,7 @@ namespace Game.Player
         static readonly int _hashJump     = Animator.StringToHash("Jump");
         static readonly int _hashIdle     = Animator.StringToHash("Idle");
         static readonly int _hashBaseIdle = Animator.StringToHash("Base Layer.Idle");
+        static readonly int _hashGather  = Animator.StringToHash("Collection");
         static readonly int[] _hashAttacks =
         {
             Animator.StringToHash("Attack0"),
@@ -45,6 +46,7 @@ namespace Game.Player
         float _coyoteTimer;
         int   _attackIndex;
         bool  _isAttacking;
+        bool  _isGathering;
 
         const float CoyoteTime = 0.15f;
 
@@ -144,7 +146,9 @@ namespace Game.Player
 
         void Update()
         {
+            if (GameManager.Instance == null) return;
             if (GameManager.Instance.State != GameState.Playing) return;
+            if (_isGathering) return;
             HandleMovement();
             HandleVertical();
         }
@@ -227,6 +231,33 @@ namespace Game.Player
         {
             yield return new WaitForSeconds(0.5f);
             _isAttacking = false;
+            ReturnAnimatorsToIdle();
+        }
+
+        public void PlayGather()
+        {
+            if (_animators == null || _animators.Length == 0) return;
+            if (_isAttacking || _isGathering) return;
+
+            _isGathering = true;
+            SetAnimatorTrigger(_hashGather);
+
+            StartCoroutine(GatherEndRoutine());
+        }
+
+        IEnumerator GatherEndRoutine()
+        {
+            if (_animator != null && _animator.isActiveAndEnabled)
+            {
+                var stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
+                float animLength = stateInfo.length / _animator.speed;
+                yield return new WaitForSeconds(animLength);
+            }
+            else
+            {
+                yield return new WaitForSeconds(0.5f);
+            }
+            _isGathering = false;
             ReturnAnimatorsToIdle();
         }
     }
