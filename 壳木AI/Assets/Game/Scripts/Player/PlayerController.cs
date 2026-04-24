@@ -28,6 +28,8 @@ namespace Game.Player
         static readonly int _hashOnGround = Animator.StringToHash("OnGround");
         static readonly int _hashVY       = Animator.StringToHash("VY");
         static readonly int _hashJump     = Animator.StringToHash("Jump");
+        static readonly int _hashIdle     = Animator.StringToHash("Idle");
+        static readonly int _hashBaseIdle = Animator.StringToHash("Base Layer.Idle");
         static readonly int[] _hashAttacks =
         {
             Animator.StringToHash("Attack0"),
@@ -103,6 +105,41 @@ namespace Game.Player
 
             foreach (var animator in _animators)
                 animator.SetTrigger(hash);
+        }
+
+        void ResetAnimatorTrigger(int hash)
+        {
+            if (_animators == null || _animators.Length == 0)
+                return;
+
+            foreach (var animator in _animators)
+                animator.ResetTrigger(hash);
+        }
+
+        void ReturnAnimatorsToIdle()
+        {
+            if (_animators == null || _animators.Length == 0)
+                return;
+
+            foreach (var attackHash in _hashAttacks)
+                ResetAnimatorTrigger(attackHash);
+
+            SetAnimatorFloat(_hashSpeed, 0f);
+
+            foreach (var animator in _animators)
+            {
+                if (animator == null || !animator.isActiveAndEnabled)
+                    continue;
+
+                if (animator.HasState(0, _hashBaseIdle))
+                {
+                    animator.CrossFadeInFixedTime(_hashBaseIdle, 0.08f, 0);
+                    continue;
+                }
+
+                if (animator.HasState(0, _hashIdle))
+                    animator.CrossFadeInFixedTime(_hashIdle, 0.08f, 0);
+            }
         }
 
         void Update()
@@ -190,6 +227,7 @@ namespace Game.Player
         {
             yield return new WaitForSeconds(0.5f);
             _isAttacking = false;
+            ReturnAnimatorsToIdle();
         }
     }
 }
