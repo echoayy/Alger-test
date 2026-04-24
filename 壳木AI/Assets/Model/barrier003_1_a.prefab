@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6219277473985213833}
   - component: {fileID: 3545261279215605561}
   - component: {fileID: 2561405954958053024}
+  - component: {fileID: 6836125137228706218}
   m_Layer: 0
   m_Name: barrier003_1_a
   m_TagString: Untagged
@@ -115,3 +116,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6836125137228706218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156465549719936849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa9dfc875e9d7b4db38246a7ec81178, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _promptText: "\u6309 F \u5F00\u95E8"
+  _openDuration: 1

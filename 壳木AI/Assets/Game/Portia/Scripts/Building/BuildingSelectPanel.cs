@@ -10,13 +10,15 @@ namespace Game.Portia
         MachineEntry[] _entries;
         Action<int>    _callback;
         Font           _font;
+        BuildController _controller;
 
-        public void Init(MachineEntry[] entries, Action<int> callback)
+        public void Init(MachineEntry[] entries, Action<int> callback, BuildController controller)
         {
-            _entries  = entries;
-            _callback = callback;
-            _font     = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf")
-                     ?? Resources.GetBuiltinResource<Font>("Arial.ttf");
+            _entries    = entries;
+            _callback   = callback;
+            _controller = controller;
+            _font       = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf")
+                       ?? Resources.GetBuiltinResource<Font>("Arial.ttf");
             BuildUI();
         }
 
@@ -37,9 +39,11 @@ namespace Game.Portia
             scaler.matchWidthOrHeight  = 0.5f;
             gameObject.AddComponent<GraphicRaycaster>();
 
-            // 半透明遮罩
-            MakeImage(transform, "Overlay", Vector2.zero, Vector2.one)
-                .color = new Color(0f, 0f, 0f, 0.55f);
+            // 半透明遮罩（点击关闭）
+            var overlay = MakeImage(transform, "Overlay", Vector2.zero, Vector2.one);
+            overlay.color = new Color(0f, 0f, 0f, 0.55f);
+            var overlayBtn = overlay.gameObject.AddComponent<Button>();
+            overlayBtn.onClick.AddListener(() => _controller?.ClosePanelExternal());
 
             // 中心面板
             var panel = MakeImage(transform, "Panel",
