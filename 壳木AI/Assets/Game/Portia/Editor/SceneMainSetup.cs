@@ -26,8 +26,8 @@ namespace Game.Portia
             var entries = so.FindProperty("_entries");
             entries.arraySize = 2;
 
-            SetEntry(entries.GetArrayElementAtIndex(0), woodPrefab,  (int)ItemGid.Wood,  1, 15, 0.5f);
-            SetEntry(entries.GetArrayElementAtIndex(1), stonePrefab, (int)ItemGid.Stone, 1, 10, 0.4f);
+            SetEntry(entries.GetArrayElementAtIndex(0), woodPrefab,  (int)ItemGid.Wood,  1, 15, 0.5f, 20f, 3f);
+            SetEntry(entries.GetArrayElementAtIndex(1), stonePrefab, (int)ItemGid.Stone, 1, 10, 0.4f, 20f, 3f);
 
             so.ApplyModifiedProperties();
 
@@ -39,13 +39,16 @@ namespace Game.Portia
         }
 
         static void SetEntry(SerializedProperty elem, GameObject prefab,
-                             int gid, int itemCount, int spawnCount, float scale)
+                             int gid, int itemCount, int spawnCount, float scale,
+                             float respawnDelay, float respawnRadius)
         {
             elem.FindPropertyRelative("prefab").objectReferenceValue = prefab;
             elem.FindPropertyRelative("gid").intValue                = gid;
             elem.FindPropertyRelative("itemCount").intValue          = itemCount;
             elem.FindPropertyRelative("spawnCount").intValue         = spawnCount;
             elem.FindPropertyRelative("scale").floatValue            = scale;
+            elem.FindPropertyRelative("respawnDelay").floatValue     = respawnDelay;
+            elem.FindPropertyRelative("respawnRadius").floatValue    = respawnRadius;
         }
     }
 }
