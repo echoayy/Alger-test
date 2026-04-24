@@ -44,6 +44,8 @@ namespace Game.Portia
             EnsureInventoryManager(managersGroup.transform);
             EnsureEventSystem();
             EnsureHUD(managersGroup.transform);
+            EnsureItemPickupToastHUD(managersGroup.transform);
+            EnsureQuickBarHUD(managersGroup.transform);
             EnsureInventoryHUD(managersGroup.transform);
 
             var player = EnsurePlayer(gameplayGroup.transform);
@@ -459,6 +461,22 @@ namespace Game.Portia
             var go = new GameObject("InventoryHUD");
             go.transform.SetParent(parent, false);
             go.AddComponent<InventoryHUD>();
+        }
+
+        static void EnsureItemPickupToastHUD(Transform parent)
+        {
+            if (Object.FindObjectOfType<ItemPickupToastUI>() != null) return;
+            var go = new GameObject("ItemPickupToastUI");
+            go.transform.SetParent(parent, false);
+            go.AddComponent<ItemPickupToastUI>();
+        }
+
+        static void EnsureQuickBarHUD(Transform parent)
+        {
+            if (Object.FindObjectOfType<QuickBarHUD>() != null) return;
+            var go = new GameObject("QuickBarHUD");
+            go.transform.SetParent(parent, false);
+            go.AddComponent<QuickBarHUD>();
         }
 
         // ── Player ────────────────────────────────────────────────────────────
