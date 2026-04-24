@@ -47,7 +47,7 @@ namespace Game.Portia
             var panelGo = new GameObject("[BuildingSelectPanel]");
             panelGo.transform.SetParent(transform, false);
             _panel = panelGo.AddComponent<BuildingSelectPanel>();
-            _panel.Init(_machines, OnMachineSelected);
+            _panel.Init(_machines, OnMachineSelected, this);
             _panel.Hide();
         }
 
@@ -91,6 +91,12 @@ namespace Game.Portia
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible   = false;
             }
+        }
+
+        public void ClosePanelExternal()
+        {
+            UIManager.Inst.PopPanel();
+            ClosePanel();
         }
 
         void OnMachineSelected(int idx)

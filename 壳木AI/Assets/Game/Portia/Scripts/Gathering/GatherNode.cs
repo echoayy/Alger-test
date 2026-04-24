@@ -20,6 +20,7 @@ namespace Game.Portia
         bool              _done;
         Vector3           _lastInitiatorPos;
         WorldProgressBar  _bar;
+        ParticleSystem    _effect;
 
         public string PromptText
         {
@@ -38,6 +39,62 @@ namespace Game.Portia
             InventoryManager.Instance.GetCount(_requiredToolGid) > 0;
 
         public bool IsDone => _done;
+
+        void Awake()
+        {
+            CreateGatherEffect();
+        }
+
+        void OnEnable()
+        {
+            if (_effect != null)
+                _effect.Play();
+        }
+
+        void OnDisable()
+        {
+            if (_effect != null)
+                _effect.Stop();
+        }
+
+        void CreateGatherEffect()
+        {
+            var go = new GameObject("GatherEffect");
+            go.transform.SetParent(transform, false);
+            go.transform.localPosition = Vector3.up * 0.5f;
+
+            var ps = go.AddComponent<ParticleSystem>();
+            var main = ps.main;
+            main.startLifetime = 1f;
+            main.startSpeed = 0.5f;
+            main.startSize = 0.05f;
+            main.startColor = new Color(0.3f, 0.5f, 1f, 0.6f);
+            main.simulationSpace = ParticleSystemSimulationSpace.World;
+            main.loop = true;
+
+            var emission = ps.emission;
+            emission.rateOverTime = 3f;
+
+            var shape = ps.shape;
+            shape.shapeType = ParticleSystemShapeType.Circle;
+            shape.radius = 0.3f;
+
+            var colorOverLifetime = ps.colorOverLifetime;
+            colorOverLifetime.enabled = true;
+            var gradient = new Gradient();
+            gradient.SetKeys(
+                new GradientColorKey[] { new GradientColorKey(new Color(0.4f, 0.6f, 1f), 0f), new GradientColorKey(new Color(0.2f, 0.4f, 0.8f), 1f) },
+                new GradientAlphaKey[] { new GradientAlphaKey(0.6f, 0f), new GradientAlphaKey(0f, 1f) }
+            );
+            colorOverLifetime.color = gradient;
+
+            var renderer = go.GetComponent<ParticleSystemRenderer>();
+            renderer.material = new Material(Shader.Find("Particles/Standard Unlit"));
+            if (renderer.material == null)
+                renderer.material = new Material(Shader.Find("Legacy Shaders/Particles/Alpha Blended"));
+
+            _effect = ps;
+        }
 
         public void Interact(GameObject initiator)
         {
@@ -92,6 +149,11 @@ namespace Game.Portia
             _done = true;
 
             if (_bar != null) { Destroy(_bar.gameObject); _bar = null; }
+            if (_effect != null)
+            {
+                _effect.Stop();
+                Destroy(_effect.gameObject, 2f);
+            }
 
             foreach (var d in _drops)
             {
@@ -139,5 +201,9 @@ namespace Game.Portia
             public int Gid;
             public int Count;
         }
+
+        // 供编辑器工具调用
+        public void SetRequiredPresses(int count) => _requiredPresses = count;
+        public void SetFallOnGather(bool fall) => _fallOnGather = fall;
     }
 }
